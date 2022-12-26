@@ -1,7 +1,6 @@
 /* a) Omoguciti korisniku unos prirodnog broja i nakon toga napraviti funkciju koja ce prebrojati koliko taj broj ima cifara
    b) Za taj broj pronaci i ispisati prvu, srednju i zadnju cifru (koristiti zasebne funkcije)
    c) Obrnuti cifre tom broju (npr. ako je broj bio 12345 treba biti 54321) */
-
 #include <iostream>
 using namespace std;
 
@@ -45,7 +44,6 @@ int srednjacifra(int n) {
 	return n % 10;
 }
 
-
 int zadnjacifra(int n) {
 	int posljednja = n % 10;
 	return posljednja;
@@ -54,8 +52,7 @@ int zadnjacifra(int n) {
 int obrni(int n) {
 	int obrnuta = 0;
 	int cifra = 0;
-	while (n>0)
-	{
+	while (n>0){
 		cifra = n % 10;
 		obrnuta = obrnuta * 10 + cifra;
 		n /= 10;
