@@ -13,33 +13,29 @@ using namespace std;
 bool isSavrsen(int br) {
 	int suma = 0;
 	for (int i = 1; i < br; i++) {
-		if (br%i==0) {
+		if (br % i == 0) {
 			suma += i;
 		}
 	}
-	if (suma == br) {
+	if (suma==br) {
 		return true;
 	}
-	else 
+	else
 		return false;
 }
 
-
-
 int main() {
-	int x, y;
+	int brojacsavrsenih = 0;
 	double suma = 0;
-	int brojacSavrsenih = 0;
-	do {
-		cout << "Unesite granice intervala x -> y: " << endl;
-		cin >> x;
-		cin >> y;
-	} while (x < 0 || y < 0);
+	int x, y;
+	cout << "Unesite granice intervala x i y: " << endl;
+	cin >> x;
+	cin >> y;
 	for (int i = x; i <= y; i++) {
 		if (isSavrsen(i)) {
 			suma += i;
-			brojacSavrsenih++;
+			brojacsavrsenih++;
 		}
 	}
-	cout << "Aritmeticka sredina savrsenih brojeva iz zadatog intervala je: " << suma / brojacSavrsenih << endl;
+	cout << "Aritmeticka sredina iznosi: " << suma / brojacsavrsenih << endl;
 }
