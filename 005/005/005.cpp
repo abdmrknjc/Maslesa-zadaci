@@ -44,21 +44,16 @@ void goldbach(int n1,int n2) {
 	if (n1%2!=0) {
 		n1++;
 	}
-	for (int i = 2; i < n2; i++)
-	{
-		for (int j = 2; j < n2; j++)
-		{
-			if (prost(i) && prost(j))
-			{
-				if (i+j==n1)
-				{
+	for (int i = 2; i < n2; i++) {
+		for (int j = 2; j < n2; j++) {
+			if (prost(i) && prost(j)) {
+				if (i+j==n1) {
 					cout << n1 << " = " << i << " + " << j << endl;
 					n1 += 2;
 				}
 			}
 		}
-		if (n1 > n2)
-		{
+		if (n1 > n2) {
 			return;
 		}
 	}
